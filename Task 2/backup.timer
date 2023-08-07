@@ -1,0 +1,11 @@
+[Unit]
+Description= timer for backup
+
+[Timer]
+OnCalendar=*-*-* 02:00:00
+Unit=backup.service
+Persistent=True
+
+[Install]
+WantedBy=multi-user.target
+
