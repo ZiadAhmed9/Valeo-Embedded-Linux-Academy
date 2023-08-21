@@ -16,7 +16,7 @@ int main()
 {
 
   char command_buffer[32];               // a buffer to hold the command in when taking it from the pipe
-  FILE *fp = NULL;                       // a pointer to FILE type to be used in piping between the app and the terminal
+  FILE *fp = nullptr;                       // a pointer to FILE type to be used in piping between the app and the terminal
   mkfifo(pipeName, 0666);                // create a pipe with name defined in shmem.hpp and with permision 0666
   int pipe_d = open(pipeName, O_RDONLY); // get the file descriptor of the pipe
   if (pipe_d == -1)                      // checking if the pipe works correctly
@@ -31,7 +31,7 @@ int main()
     boost::log::core::get()->flush();
   }
   LOG_TRACE << "FILE HANDLER: Semaphore created and initially is 0";
-  boost::log::core::get()->flush();
+  //boost::log::core::get()->flush();
   while (true) // infinite loop
   {
 
@@ -47,8 +47,9 @@ int main()
     command_buffer[bytes_read] = '\0';                                                             // last element in the string must be \0
     LOG_TRACE << "FILE HANDLER: found " << bytes_read << " bytes containing : " << command_buffer; // for tracing log the number of bytes and contents
     boost::log::core::get()->flush();
-    fp = popen(command_buffer, "r");                                                               // Open a pipe between terminal and cpp file
-                                     // The function takes the command executes it and returns pointer to file containing output
+
+    /*now Open a pipe between terminal and cpp file, The function takes the command executes it and returns pointer to file containing output*/
+    fp = popen(command_buffer, "r"); 
     if (!fp) // if file is not created didn't open
     {
       LOG_FATAL << "FILE HANDLER: failed to access pipe with CMD to execute the command";
@@ -76,7 +77,7 @@ int main()
       strcpy(pshared_memory + i, ""); // Initially empty the shared memory
     }
     LOG_TRACE << "FILE HANDLER: Memory is erased before writing on it";
-    boost::log::core::get()->flush();
+    //boost::log::core::get()->flush();
     /* next line is quiet tricky, we discussed that fp is pointer to file
     which contains the output of the command we received and now we want to store
     this output in the shared memory feof() function will be true if we reach the end of the file
@@ -96,6 +97,7 @@ int main()
     shmdt(pshared_memory); // we now un-attach from the shared memory safely and start all over again
     LOG_TRACE << "FILE HANDLER: Semaphore is incremented";
     boost::log::core::get()->flush();
+    pclose(fp);
   }
   return 0;
 }
