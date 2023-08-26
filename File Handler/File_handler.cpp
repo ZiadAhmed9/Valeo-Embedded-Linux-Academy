@@ -31,7 +31,7 @@ int main()
     boost::log::core::get()->flush();
   }
   LOG_TRACE << "FILE HANDLER: Semaphore created and initially is 0";
-  //boost::log::core::get()->flush();
+  boost::log::core::get()->flush();
   while (true) // infinite loop
   {
 
@@ -43,7 +43,6 @@ int main()
       sleep(5);
       continue;
     }
-    cout << command_buffer;
     command_buffer[bytes_read] = '\0';                                                             // last element in the string must be \0
     LOG_TRACE << "FILE HANDLER: found " << bytes_read << " bytes containing : " << command_buffer; // for tracing log the number of bytes and contents
     boost::log::core::get()->flush();
@@ -77,7 +76,7 @@ int main()
       strcpy(pshared_memory + i, ""); // Initially empty the shared memory
     }
     LOG_TRACE << "FILE HANDLER: Memory is erased before writing on it";
-    //boost::log::core::get()->flush();
+    boost::log::core::get()->flush();
     /* next line is quiet tricky, we discussed that fp is pointer to file
     which contains the output of the command we received and now we want to store
     this output in the shared memory feof() function will be true if we reach the end of the file
