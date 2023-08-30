@@ -55,7 +55,7 @@ BOOST_LOG_GLOBAL_LOGGER_INIT(logger, src::severity_logger_mt)
                                    << " - " << expr::smessage;
     sink->set_formatter(formatter);
 
-    logging::add_file_log("/home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/run_logs.txt", logkw::open_mode = std::ios::app)
+    logging::add_file_log("/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/run_logs.txt", logkw::open_mode = std::ios::app)
         ->set_formatter(formatter);
 
     // only messages with severity >= SEVERITY_THRESHOLD are written
@@ -67,11 +67,52 @@ BOOST_LOG_GLOBAL_LOGGER_INIT(logger, src::severity_logger_mt)
     return logger;
 }
 
+std::vector<std::string> read_config_file(const std::string &filename)
+{
+    std::vector<std::string> lines;
+    std::ifstream configFile(filename);
+    if (!configFile.is_open())
+    {
+        std::cerr << "Error opening config file: " << filename << std::endl;
+        return lines;
+    }
 
+    std::string line;
+    while (std::getline(configFile, line))
+    {
+        line = "/" + line;
+        lines.push_back(line);
+    }
+
+    configFile.close();
+    return lines;
+}
 
 int main()
 {
-    messageq_receiver logger_daemon;
+    int number_of_queues = 0;
+    const string CONFIG_FILE = "/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/config_lib/config.txt";
+    vector<string> queue_names = read_config_file(CONFIG_FILE);
+    if (queue_names.empty())
+    {
+        std::cout << "No lines found in the config file." << std::endl;
+    }
+    else
+    {
+        std::cout << "Read " << queue_names.size() << "lines from the config file:" << std::endl;
+        for (const std::string &line : queue_names)
+        {
+            std::cout << line << std::endl;
+        }
+    }
+    vector<messageq_receiver> receivers;
+    for (const std::string &name : queue_names)
+    {
+        messageq_receiver messageq_receiver_obj(name);
+        receivers.push_back(messageq_receiver_obj);
+        number_of_queues++;
+    }
+    messageq_receiver queue("/myqueue");
     TCP_client client("127.0.0.1",5000);
     if(!client.connect_2server())
     {
@@ -82,26 +123,44 @@ int main()
     }
     LOG_TRACE<<"Socket client connected to server.";
     cout<<"Socket client connected to server."<<endl;
-    char mq_buffer[1024] ={0};
-    string test ={0};
+    char mq_buffer[1024] = {0};
+    string test = {0};
     boost::log::core::get()->flush();
-    messageq_state_type state = logger_daemon.messageq_create();
-    if(state==MQ_CREATE_ERROR)
+    // for (const std::string &queue_name : queue_names)
+    // {
+    //     messageq_state_type state = logger_daemon.messageq_create(queue_name);
+    //     if (state == MQ_CREATE_ERROR)
+    //     {
+    //         cout << "failed to create message queue for " << queue_name << endl;
+    //         LOG_FATAL << "failed to create message queue";
+    //         return 1;
+    //     }
+    //     cout << "Created queue for " << queue_name << endl;
+    //     LOG_TRACE << "failed to create message queue " << queue_name;
+    // }
+    // messageq_state_type state = logger_daemon.messageq_create("/myqueue");
+    // if (state == MQ_CREATE_ERROR)
+    // {
+    //     cout << "failed to create message queue" << endl;
+    //     LOG_FATAL << "failed to create message queue" << endl;
+    //     // return 1;
+    // }
+    // cout << "created message queue" << endl;
+    // messageq_state_type state;
+    int state;
+    while (1)
     {
-        cout<<"failed to create message queue"<<endl;
-        LOG_FATAL<<"failed to create message queue"<<endl;
-        //return 1;
-    }
-    cout<<"created message queue"<<endl;
-    while(1)
-    {
-        state = logger_daemon.messageq_receive_sync(mq_buffer);
-        test = mq_buffer;
-        cout << test << endl;
-        LOG_ERROR << test;
-        boost::log::core::get()->flush();
-        client.send(mq_buffer,sizeof(mq_buffer));
-        sleep(1);
+        for (int i = 0; i < number_of_queues; i++)
+        {
+            state = receivers[i].messageq_receive_async(mq_buffer);
+            cout<<mq_buffer;
+            test = mq_buffer;
+            cout << test << endl;
+            LOG_ERROR << test;
+            boost::log::core::get()->flush();
+            client.send(mq_buffer,sizeof(mq_buffer));
+        }
+        // state = queue.messageq_receive_sync(mq_buffer);
     }
     return 0;
 }

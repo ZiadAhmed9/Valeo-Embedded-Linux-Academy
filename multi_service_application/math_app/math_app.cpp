@@ -7,7 +7,7 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     messageq_sender math_app_obj;
-    math_app_obj.messageq_connect();
+    math_app_obj.messageq_connect("/math_app");
     if (argc == 2 && std::strcmp(argv[1], "--help") == 0)
     {
         std::cout << "Usage: " << argv[0] << " <num1> <operator> <num2>\n"

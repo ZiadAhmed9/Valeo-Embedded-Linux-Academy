@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application
+CMAKE_SOURCE_DIR = /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build
+CMAKE_BINARY_DIR = /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build
 
 # Include any dependencies generated for this target.
 include sockets_lib/CMakeFiles/socket_lib.dir/depend.make
@@ -72,16 +72,16 @@ include sockets_lib/CMakeFiles/socket_lib.dir/flags.make
 sockets_lib/CMakeFiles/socket_lib.dir/sockets.cpp.o: sockets_lib/CMakeFiles/socket_lib.dir/flags.make
 sockets_lib/CMakeFiles/socket_lib.dir/sockets.cpp.o: ../sockets_lib/sockets.cpp
 sockets_lib/CMakeFiles/socket_lib.dir/sockets.cpp.o: sockets_lib/CMakeFiles/socket_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object sockets_lib/CMakeFiles/socket_lib.dir/sockets.cpp.o"
-	cd /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/sockets_lib && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT sockets_lib/CMakeFiles/socket_lib.dir/sockets.cpp.o -MF CMakeFiles/socket_lib.dir/sockets.cpp.o.d -o CMakeFiles/socket_lib.dir/sockets.cpp.o -c /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/sockets_lib/sockets.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object sockets_lib/CMakeFiles/socket_lib.dir/sockets.cpp.o"
+	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/sockets_lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT sockets_lib/CMakeFiles/socket_lib.dir/sockets.cpp.o -MF CMakeFiles/socket_lib.dir/sockets.cpp.o.d -o CMakeFiles/socket_lib.dir/sockets.cpp.o -c /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/sockets_lib/sockets.cpp
 
 sockets_lib/CMakeFiles/socket_lib.dir/sockets.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/socket_lib.dir/sockets.cpp.i"
-	cd /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/sockets_lib && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/sockets_lib/sockets.cpp > CMakeFiles/socket_lib.dir/sockets.cpp.i
+	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/sockets_lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/sockets_lib/sockets.cpp > CMakeFiles/socket_lib.dir/sockets.cpp.i
 
 sockets_lib/CMakeFiles/socket_lib.dir/sockets.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/socket_lib.dir/sockets.cpp.s"
-	cd /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/sockets_lib && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/sockets_lib/sockets.cpp -o CMakeFiles/socket_lib.dir/sockets.cpp.s
+	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/sockets_lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/sockets_lib/sockets.cpp -o CMakeFiles/socket_lib.dir/sockets.cpp.s
 
 # Object files for target socket_lib
 socket_lib_OBJECTS = \
@@ -93,19 +93,19 @@ socket_lib_EXTERNAL_OBJECTS =
 sockets_lib/libsocket_lib.a: sockets_lib/CMakeFiles/socket_lib.dir/sockets.cpp.o
 sockets_lib/libsocket_lib.a: sockets_lib/CMakeFiles/socket_lib.dir/build.make
 sockets_lib/libsocket_lib.a: sockets_lib/CMakeFiles/socket_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libsocket_lib.a"
-	cd /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/sockets_lib && $(CMAKE_COMMAND) -P CMakeFiles/socket_lib.dir/cmake_clean_target.cmake
-	cd /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/sockets_lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/socket_lib.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libsocket_lib.a"
+	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/sockets_lib && $(CMAKE_COMMAND) -P CMakeFiles/socket_lib.dir/cmake_clean_target.cmake
+	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/sockets_lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/socket_lib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 sockets_lib/CMakeFiles/socket_lib.dir/build: sockets_lib/libsocket_lib.a
 .PHONY : sockets_lib/CMakeFiles/socket_lib.dir/build
 
 sockets_lib/CMakeFiles/socket_lib.dir/clean:
-	cd /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/sockets_lib && $(CMAKE_COMMAND) -P CMakeFiles/socket_lib.dir/cmake_clean.cmake
+	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/sockets_lib && $(CMAKE_COMMAND) -P CMakeFiles/socket_lib.dir/cmake_clean.cmake
 .PHONY : sockets_lib/CMakeFiles/socket_lib.dir/clean
 
 sockets_lib/CMakeFiles/socket_lib.dir/depend:
-	cd /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/sockets_lib /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/sockets_lib /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/sockets_lib/CMakeFiles/socket_lib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/sockets_lib /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/sockets_lib /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/sockets_lib/CMakeFiles/socket_lib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : sockets_lib/CMakeFiles/socket_lib.dir/depend
 

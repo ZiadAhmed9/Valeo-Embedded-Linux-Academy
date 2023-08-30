@@ -1,8 +1,8 @@
-# Install script for directory: /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/ipc_lib
+# Install script for directory: /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/ipc_lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr/local")
+  set(CMAKE_INSTALL_PREFIX "/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/buid")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

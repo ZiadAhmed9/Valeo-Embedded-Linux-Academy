@@ -18,19 +18,20 @@ typedef enum
     MQ_SENDING_ERROR,
     MQ_RECEIVE_ERROR,
 } messageq_state_type;
+
 class messageq_receiver
 {
 private:
     mqd_t mq_descriptor;
-
+    string name;
 public:
-    messageq_receiver();
+    messageq_receiver(const std::string &queue_name);
 
-    messageq_state_type messageq_create();
+    messageq_state_type messageq_create(const std::string &name);
 
-    messageq_state_type messageq_receive_sync(char *str);
+    messageq_state_type messageq_receive_sync(char *buffer);
 
-    messageq_state_type messageq_receive_async();
+    messageq_state_type messageq_receive_async(char *buffer);
 };
 
 class messageq_sender
@@ -41,7 +42,7 @@ private:
 
 public:
     messageq_sender();
-    messageq_state_type messageq_connect();
+    messageq_state_type messageq_connect(const std::string& name);
     messageq_state_type messageq_send(const string &message);
 };
 

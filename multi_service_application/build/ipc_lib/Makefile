@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application
+CMAKE_SOURCE_DIR = /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build
+CMAKE_BINARY_DIR = /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/ipc_lib//CMakeFiles/progress.marks
-	cd /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ipc_lib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles 0
+	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/ipc_lib//CMakeFiles/progress.marks
+	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ipc_lib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ipc_lib/clean
+	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ipc_lib/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,17 +103,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ipc_lib/preinstall
+	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ipc_lib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ipc_lib/preinstall
+	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ipc_lib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -135,6 +135,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

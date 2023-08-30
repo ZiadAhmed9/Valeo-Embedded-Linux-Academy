@@ -21,6 +21,7 @@ add_executable (math_app math_app/math_app.cpp)
 add_executable(daemon_logger simple_logger/simpleLogger.cpp simple_logger/simpleLogger.h)
 add_executable(receiver_app logger_receiver/server.cpp)
 
+
 target_link_libraries(math_app ipc_lib ${Boost_LIBRARIES} pthread)
 target_link_libraries(daemon_logger socket_lib ipc_lib ${Boost_LIBRARIES} pthread)
 target_link_libraries(receiver_app socket_lib pthread)
