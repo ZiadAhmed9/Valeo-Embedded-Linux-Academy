@@ -1,0 +1,34 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_342d7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_342d7.dir/build.make CMakeFiles/cmTC_342d7.dir/build
+gmake[1]: Entering directory '/home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_342d7.dir/src.c.o
+/usr/bin/gcc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_342d7.dir/src.c.o -c /home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_342d7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_342d7.dir/link.txt --verbose=1
+/usr/bin/gcc -rdynamic CMakeFiles/cmTC_342d7.dir/src.c.o -o cmTC_342d7 
+gmake[1]: Leaving directory '/home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+

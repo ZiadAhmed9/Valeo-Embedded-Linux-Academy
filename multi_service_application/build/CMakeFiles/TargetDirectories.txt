@@ -1,0 +1,11 @@
+/home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles/ipc_lib.dir
+/home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles/math_app.dir
+/home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles/daemon_logger.dir
+/home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles/receiver_app.dir
+/home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles/edit_cache.dir
+/home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles/rebuild_cache.dir
+/home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/ipc_lib/CMakeFiles/edit_cache.dir
+/home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/ipc_lib/CMakeFiles/rebuild_cache.dir
+/home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/sockets_lib/CMakeFiles/socket_lib.dir
+/home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/sockets_lib/CMakeFiles/edit_cache.dir
+/home/ziad/test/Valeo-Embedded-Linux-Academy/multi_service_application/build/sockets_lib/CMakeFiles/rebuild_cache.dir
