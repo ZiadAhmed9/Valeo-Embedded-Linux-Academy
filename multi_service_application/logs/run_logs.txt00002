@@ -1,0 +1,8 @@
+0000025 | 2023-08-31, 17:02:16.001096 [error] - DAEMON LOGGER APP: No data received from message queue named /mobile_app
+0000026 | 2023-08-31, 17:02:17.004164 [trace] - MATH APP: Help printed on screen
+0000027 | 2023-08-31, 17:02:17.004310 [trace] - DAEMON LOGGER APP: Socket client connected to server and logs are sent to it.
+0000028 | 2023-08-31, 17:02:18.000562 [error] - DAEMON LOGGER APP: No data received from message queue named /mobile_app
+0000029 | 2023-08-31, 17:02:20.000639 [error] - DAEMON LOGGER APP: No data received from message queue named /math_app
+0000030 | 2023-08-31, 17:02:20.001142 [error] - DAEMON LOGGER APP: No data received from message queue named /mobile_app
+0000031 | 2023-08-31, 17:02:22.000640 [error] - DAEMON LOGGER APP: No data received from message queue named /math_app
+0000032 | 2023-08-31, 17:02:22.000962 [error] - DAEMON LOGGER APP: No data received from message queue named /mobile_app

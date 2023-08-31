@@ -89,10 +89,10 @@ messageq_state_type messageq_sender::messageq_connect(const std::string &name)
     mq_descriptor = mq_open(name.c_str(), O_RDWR);
     if (mq_descriptor == -1)
     {
-        cout << "not connected";
+        cout << "Connection to message queue failed."<<endl;
         return MQ_CONNECTION_ERROR;
     }
-    cout << "connected";
+    cout << "Connected to message queue"<<endl;
     return MQ_OK;
 }
 /*
@@ -105,11 +105,11 @@ messageq_state_type messageq_sender::messageq_send(const string &message)
 {
     if (mq_descriptor == -1) // checking if descriptor is valid
     {
-        cerr<<"Message queue sending error";
+        cerr<<"Message queue sending error."<<endl;;
         return MQ_SENDING_ERROR;
     }
     mq_send_result = mq_send(mq_descriptor, message.c_str(), message.size(), 0);
-    cout << "mq sent";
+    cout << "Log sent through message queue."<<endl;
     if (mq_send_result == -1)
     {
         return MQ_SENDING_ERROR;

@@ -40,33 +40,36 @@ BOOST_LOG_ATTRIBUTE_KEYWORD(line_id, "LineID", unsigned int)
 BOOST_LOG_ATTRIBUTE_KEYWORD(timestamp, "TimeStamp", boost::posix_time::ptime)
 BOOST_LOG_ATTRIBUTE_KEYWORD(severity, "Severity", logging::trivial::severity_level)
 
-// function to be used for the logs
+// function to be used for the logs Check the boost documentation for more info
 BOOST_LOG_GLOBAL_LOGGER_INIT(logger, src::severity_logger_mt)
 {
     src::severity_logger_mt<boost::log::trivial::severity_level> logger;
-
-    // add attributes
-    logger.add_attribute("LineID", attrs::counter<unsigned int>(1)); // lines are sequentially numbered
-    logger.add_attribute("TimeStamp", attrs::local_clock());         // each log line gets a timestamp
-
-    // adjusting sink
+    logger.add_attribute("LineID", attrs::counter<unsigned int>(1)); // Lines are sequentially numbered
+    logger.add_attribute("TimeStamp", attrs::local_clock());         // Each log line gets a timestamp
     typedef sinks::synchronous_sink<sinks::text_ostream_backend> text_sink;
     boost::shared_ptr<text_sink> sink = boost::make_shared<text_sink>();
-
     logging::formatter formatter = expr::stream
-                                   << setw(7) << setfill('0') << line_id << setfill(' ') << " | "
+                                   << std::setw(7) << std::setfill('0') << line_id << std::setfill(' ') << " | "
                                    << expr::format_date_time(timestamp, "%Y-%m-%d, %H:%M:%S.%f") << " "
                                    << "[" << logging::trivial::severity << "]"
                                    << " - " << expr::smessage;
     sink->set_formatter(formatter);
 
-    logging::add_file_log("/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/run_logs.txt", logkw::open_mode = ios::app)
-        ->set_formatter(formatter);
+    auto fileSink = logging::add_file_log(
+        logkw::file_name = LOGFILE,
+        logkw::rotation_size = MAX_FILE_SIZE); // Max file size here
 
-    // only messages with severity >= SEVERITY_THRESHOLD are written
+    fileSink->locked_backend()->set_file_collector(
+        sinks::file::make_collector(
+            logkw::target = LOG_FILE_PATH));
+
+    fileSink->set_formatter(formatter);
+   
+    logging::core::get()->add_global_attribute("RotationCounter", attrs::counter<unsigned int>(0, 1)); // Start from 0 and increment by 1
+    logging::core::get()->add_global_attribute("RotationSize", attrs::constant<unsigned int>(1024));   // Set the rotation size
+    logging::core::get()->add_global_attribute("FileRotation", attrs::constant<unsigned int>(1)); // Enable file rotation
+    logging::core::get()->add_global_attribute("FileRotationPattern", attrs::constant<std::string>("%run%_%logs%.log")); // Set the file name pattern
     sink->set_filter(severity >= SEVERITY_THRESHOLD);
-
-    // "register" our sink
     logging::core::get()->add_sink(sink);
     logging::keywords::auto_flush = true;
     return logger;

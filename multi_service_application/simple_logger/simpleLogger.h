@@ -5,7 +5,8 @@
 
 #include <boost/log/trivial.hpp>
 #include <boost/log/sources/global_logger_storage.hpp>
-void init();
+#define LOG_FILE_PATH "/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/logs"
+#define MAX_FILE_SIZE 1024
 // the logs are also written to LOGFILE
 #define LOGFILE "run_logs.txt"
 
