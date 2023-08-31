@@ -257,15 +257,6 @@ multi_service_application_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 multi_service_application_SOURCE_DIR:STATIC=/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application
 
-//Value Computed by CMake
-simpleLogger_BINARY_DIR:STATIC=/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/ipc_lib
-
-//Value Computed by CMake
-simpleLogger_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-simpleLogger_SOURCE_DIR:STATIC=/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/ipc_lib
-
 
 ########################
 # INTERNAL cache entries

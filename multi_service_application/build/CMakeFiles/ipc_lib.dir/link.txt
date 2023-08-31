@@ -1,2 +1,0 @@
-/usr/bin/ar qc libipc_lib.a CMakeFiles/ipc_lib.dir/ipc_lib/ipc_lib.cpp.o
-/usr/bin/ranlib libipc_lib.a

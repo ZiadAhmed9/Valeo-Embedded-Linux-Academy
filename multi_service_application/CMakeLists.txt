@@ -16,12 +16,13 @@ message(status "** Boost Libraries: ${Boost_LIBRARIES}")
 add_subdirectory(ipc_lib)
 add_subdirectory(sockets_lib)
 
-add_library(ipc_lib ipc_lib/ipc_lib.cpp ipc_lib/ipc_lib.hpp)
-add_executable (math_app math_app/math_app.cpp)
-add_executable(daemon_logger simple_logger/simpleLogger.cpp simple_logger/simpleLogger.h)
-add_executable(receiver_app logger_receiver/server.cpp)
+add_executable (math_app math_app/math_app.cpp) #math_app executable
+add_executable(daemon_logger    #name of the executable
+                simple_logger/config_parsing.cpp simple_logger/config_parsing.hpp #files used in parsing config
+                simple_logger/simpleLogger.cpp simple_logger/simpleLogger.h)    #daemon logger header and source
+add_executable(receiver_app logger_receiver/server.cpp) #server executable
 
 
-target_link_libraries(math_app ipc_lib ${Boost_LIBRARIES} pthread)
-target_link_libraries(daemon_logger socket_lib ipc_lib ${Boost_LIBRARIES} pthread)
-target_link_libraries(receiver_app socket_lib pthread)
+target_link_libraries(math_app ipc_lib ${Boost_LIBRARIES} pthread)  #Linking math apps with libraries needed
+target_link_libraries(daemon_logger socket_lib ipc_lib ${Boost_LIBRARIES} pthread)  #linking daemon logger with libraries needed
+target_link_libraries(receiver_app socket_lib pthread)  #linking receiver with libraries needed

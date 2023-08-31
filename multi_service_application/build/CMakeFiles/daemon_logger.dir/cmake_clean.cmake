@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.o"
+  "CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.o.d"
   "CMakeFiles/daemon_logger.dir/simple_logger/simpleLogger.cpp.o"
   "CMakeFiles/daemon_logger.dir/simple_logger/simpleLogger.cpp.o.d"
   "daemon_logger"

@@ -93,9 +93,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/ipc_lib.dir/DependInfo.cmake"
   "CMakeFiles/math_app.dir/DependInfo.cmake"
   "CMakeFiles/daemon_logger.dir/DependInfo.cmake"
   "CMakeFiles/receiver_app.dir/DependInfo.cmake"
+  "ipc_lib/CMakeFiles/ipc_lib.dir/DependInfo.cmake"
   "sockets_lib/CMakeFiles/socket_lib.dir/DependInfo.cmake"
   )

@@ -69,10 +69,24 @@ include CMakeFiles/daemon_logger.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/daemon_logger.dir/flags.make
 
+CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.o: CMakeFiles/daemon_logger.dir/flags.make
+CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.o: ../simple_logger/config_parsing.cpp
+CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.o: CMakeFiles/daemon_logger.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.o -MF CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.o.d -o CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.o -c /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/simple_logger/config_parsing.cpp
+
+CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/simple_logger/config_parsing.cpp > CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.i
+
+CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/simple_logger/config_parsing.cpp -o CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.s
+
 CMakeFiles/daemon_logger.dir/simple_logger/simpleLogger.cpp.o: CMakeFiles/daemon_logger.dir/flags.make
 CMakeFiles/daemon_logger.dir/simple_logger/simpleLogger.cpp.o: ../simple_logger/simpleLogger.cpp
 CMakeFiles/daemon_logger.dir/simple_logger/simpleLogger.cpp.o: CMakeFiles/daemon_logger.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/daemon_logger.dir/simple_logger/simpleLogger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/daemon_logger.dir/simple_logger/simpleLogger.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/daemon_logger.dir/simple_logger/simpleLogger.cpp.o -MF CMakeFiles/daemon_logger.dir/simple_logger/simpleLogger.cpp.o.d -o CMakeFiles/daemon_logger.dir/simple_logger/simpleLogger.cpp.o -c /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/simple_logger/simpleLogger.cpp
 
 CMakeFiles/daemon_logger.dir/simple_logger/simpleLogger.cpp.i: cmake_force
@@ -85,15 +99,17 @@ CMakeFiles/daemon_logger.dir/simple_logger/simpleLogger.cpp.s: cmake_force
 
 # Object files for target daemon_logger
 daemon_logger_OBJECTS = \
+"CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.o" \
 "CMakeFiles/daemon_logger.dir/simple_logger/simpleLogger.cpp.o"
 
 # External object files for target daemon_logger
 daemon_logger_EXTERNAL_OBJECTS =
 
+daemon_logger: CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.o
 daemon_logger: CMakeFiles/daemon_logger.dir/simple_logger/simpleLogger.cpp.o
 daemon_logger: CMakeFiles/daemon_logger.dir/build.make
 daemon_logger: sockets_lib/libsocket_lib.a
-daemon_logger: libipc_lib.a
+daemon_logger: ipc_lib/libipc_lib.so
 daemon_logger: /usr/lib/x86_64-linux-gnu/libboost_log_setup.so.1.74.0
 daemon_logger: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0
 daemon_logger: /usr/lib/x86_64-linux-gnu/libboost_log.so.1.74.0
@@ -103,7 +119,7 @@ daemon_logger: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.74.0
 daemon_logger: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.74.0
 daemon_logger: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.74.0
 daemon_logger: CMakeFiles/daemon_logger.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable daemon_logger"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable daemon_logger"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/daemon_logger.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_CHRONO_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_LOG_DYN_LINK -DBOOST_LOG_SETUP_DYN_LINK -DBOOST_REGEX_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK
 
-CXX_INCLUDES = -I/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/sockets_lib/$(CMAKE_CURRENT_SOURCE_DIR)
+CXX_INCLUDES = -I/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/sockets_lib/$(CMAKE_CURRENT_SOURCE_DIR) -I/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/ipc_lib/$(CMAKE_CURRENT_SOURCE_DIR)
 
 CXX_FLAGS = 
 

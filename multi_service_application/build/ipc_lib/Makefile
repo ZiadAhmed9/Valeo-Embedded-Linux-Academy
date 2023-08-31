@@ -116,6 +116,44 @@ depend:
 	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+ipc_lib/CMakeFiles/ipc_lib.dir/rule:
+	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ipc_lib/CMakeFiles/ipc_lib.dir/rule
+.PHONY : ipc_lib/CMakeFiles/ipc_lib.dir/rule
+
+# Convenience name for target.
+ipc_lib: ipc_lib/CMakeFiles/ipc_lib.dir/rule
+.PHONY : ipc_lib
+
+# fast build rule for target.
+ipc_lib/fast:
+	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(MAKE) $(MAKESILENT) -f ipc_lib/CMakeFiles/ipc_lib.dir/build.make ipc_lib/CMakeFiles/ipc_lib.dir/build
+.PHONY : ipc_lib/fast
+
+ipc_lib.o: ipc_lib.cpp.o
+.PHONY : ipc_lib.o
+
+# target to build an object file
+ipc_lib.cpp.o:
+	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(MAKE) $(MAKESILENT) -f ipc_lib/CMakeFiles/ipc_lib.dir/build.make ipc_lib/CMakeFiles/ipc_lib.dir/ipc_lib.cpp.o
+.PHONY : ipc_lib.cpp.o
+
+ipc_lib.i: ipc_lib.cpp.i
+.PHONY : ipc_lib.i
+
+# target to preprocess a source file
+ipc_lib.cpp.i:
+	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(MAKE) $(MAKESILENT) -f ipc_lib/CMakeFiles/ipc_lib.dir/build.make ipc_lib/CMakeFiles/ipc_lib.dir/ipc_lib.cpp.i
+.PHONY : ipc_lib.cpp.i
+
+ipc_lib.s: ipc_lib.cpp.s
+.PHONY : ipc_lib.s
+
+# target to generate assembly for a file
+ipc_lib.cpp.s:
+	cd /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build && $(MAKE) $(MAKESILENT) -f ipc_lib/CMakeFiles/ipc_lib.dir/build.make ipc_lib/CMakeFiles/ipc_lib.dir/ipc_lib.cpp.s
+.PHONY : ipc_lib.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -124,6 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... ipc_lib"
+	@echo "... ipc_lib.o"
+	@echo "... ipc_lib.i"
+	@echo "... ipc_lib.s"
 .PHONY : help
 
 

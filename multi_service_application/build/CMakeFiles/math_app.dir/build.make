@@ -92,7 +92,7 @@ math_app_EXTERNAL_OBJECTS =
 
 math_app: CMakeFiles/math_app.dir/math_app/math_app.cpp.o
 math_app: CMakeFiles/math_app.dir/build.make
-math_app: libipc_lib.a
+math_app: ipc_lib/libipc_lib.so
 math_app: /usr/lib/x86_64-linux-gnu/libboost_log_setup.so.1.74.0
 math_app: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0
 math_app: /usr/lib/x86_64-linux-gnu/libboost_log.so.1.74.0

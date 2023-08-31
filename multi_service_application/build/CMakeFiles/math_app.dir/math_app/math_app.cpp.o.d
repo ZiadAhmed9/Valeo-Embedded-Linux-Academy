@@ -1,6 +1,8 @@
 CMakeFiles/math_app.dir/math_app/math_app.cpp.o: \
  /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/math_app/math_app.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
+ /usr/include/stdc-predef.h \
+ /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/math_app/math_app.hpp \
+ /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -146,7 +148,6 @@ CMakeFiles/math_app.dir/math_app/math_app.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/math_app/math_app.hpp \
  /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/math_app/../ipc_lib/ipc_lib.hpp \
  /usr/include/mqueue.h /usr/include/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl.h \

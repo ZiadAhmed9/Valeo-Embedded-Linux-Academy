@@ -2235,4 +2235,5 @@ CMakeFiles/daemon_logger.dir/simple_logger/simpleLogger.cpp.o: \
  /usr/include/x86_64-linux-gnu/asm/sockios.h \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
- /usr/include/x86_64-linux-gnu/bits/in.h
+ /usr/include/x86_64-linux-gnu/bits/in.h \
+ /home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/simple_logger/config_parsing.hpp

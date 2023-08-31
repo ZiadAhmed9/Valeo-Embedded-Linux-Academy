@@ -117,19 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ipc_lib
-
-# Build rule for target.
-ipc_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ipc_lib
-.PHONY : ipc_lib
-
-# fast build rule for target.
-ipc_lib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ipc_lib.dir/build.make CMakeFiles/ipc_lib.dir/build
-.PHONY : ipc_lib/fast
-
-#=============================================================================
 # Target rules for targets named math_app
 
 # Build rule for target.
@@ -169,6 +156,19 @@ receiver_app/fast:
 .PHONY : receiver_app/fast
 
 #=============================================================================
+# Target rules for targets named ipc_lib
+
+# Build rule for target.
+ipc_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ipc_lib
+.PHONY : ipc_lib
+
+# fast build rule for target.
+ipc_lib/fast:
+	$(MAKE) $(MAKESILENT) -f ipc_lib/CMakeFiles/ipc_lib.dir/build.make ipc_lib/CMakeFiles/ipc_lib.dir/build
+.PHONY : ipc_lib/fast
+
+#=============================================================================
 # Target rules for targets named socket_lib
 
 # Build rule for target.
@@ -180,30 +180,6 @@ socket_lib: cmake_check_build_system
 socket_lib/fast:
 	$(MAKE) $(MAKESILENT) -f sockets_lib/CMakeFiles/socket_lib.dir/build.make sockets_lib/CMakeFiles/socket_lib.dir/build
 .PHONY : socket_lib/fast
-
-ipc_lib/ipc_lib.o: ipc_lib/ipc_lib.cpp.o
-.PHONY : ipc_lib/ipc_lib.o
-
-# target to build an object file
-ipc_lib/ipc_lib.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ipc_lib.dir/build.make CMakeFiles/ipc_lib.dir/ipc_lib/ipc_lib.cpp.o
-.PHONY : ipc_lib/ipc_lib.cpp.o
-
-ipc_lib/ipc_lib.i: ipc_lib/ipc_lib.cpp.i
-.PHONY : ipc_lib/ipc_lib.i
-
-# target to preprocess a source file
-ipc_lib/ipc_lib.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ipc_lib.dir/build.make CMakeFiles/ipc_lib.dir/ipc_lib/ipc_lib.cpp.i
-.PHONY : ipc_lib/ipc_lib.cpp.i
-
-ipc_lib/ipc_lib.s: ipc_lib/ipc_lib.cpp.s
-.PHONY : ipc_lib/ipc_lib.s
-
-# target to generate assembly for a file
-ipc_lib/ipc_lib.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ipc_lib.dir/build.make CMakeFiles/ipc_lib.dir/ipc_lib/ipc_lib.cpp.s
-.PHONY : ipc_lib/ipc_lib.cpp.s
 
 logger_receiver/server.o: logger_receiver/server.cpp.o
 .PHONY : logger_receiver/server.o
@@ -253,6 +229,30 @@ math_app/math_app.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math_app.dir/build.make CMakeFiles/math_app.dir/math_app/math_app.cpp.s
 .PHONY : math_app/math_app.cpp.s
 
+simple_logger/config_parsing.o: simple_logger/config_parsing.cpp.o
+.PHONY : simple_logger/config_parsing.o
+
+# target to build an object file
+simple_logger/config_parsing.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/daemon_logger.dir/build.make CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.o
+.PHONY : simple_logger/config_parsing.cpp.o
+
+simple_logger/config_parsing.i: simple_logger/config_parsing.cpp.i
+.PHONY : simple_logger/config_parsing.i
+
+# target to preprocess a source file
+simple_logger/config_parsing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/daemon_logger.dir/build.make CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.i
+.PHONY : simple_logger/config_parsing.cpp.i
+
+simple_logger/config_parsing.s: simple_logger/config_parsing.cpp.s
+.PHONY : simple_logger/config_parsing.s
+
+# target to generate assembly for a file
+simple_logger/config_parsing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/daemon_logger.dir/build.make CMakeFiles/daemon_logger.dir/simple_logger/config_parsing.cpp.s
+.PHONY : simple_logger/config_parsing.cpp.s
+
 simple_logger/simpleLogger.o: simple_logger/simpleLogger.cpp.o
 .PHONY : simple_logger/simpleLogger.o
 
@@ -290,15 +290,15 @@ help:
 	@echo "... math_app"
 	@echo "... receiver_app"
 	@echo "... socket_lib"
-	@echo "... ipc_lib/ipc_lib.o"
-	@echo "... ipc_lib/ipc_lib.i"
-	@echo "... ipc_lib/ipc_lib.s"
 	@echo "... logger_receiver/server.o"
 	@echo "... logger_receiver/server.i"
 	@echo "... logger_receiver/server.s"
 	@echo "... math_app/math_app.o"
 	@echo "... math_app/math_app.i"
 	@echo "... math_app/math_app.s"
+	@echo "... simple_logger/config_parsing.o"
+	@echo "... simple_logger/config_parsing.i"
+	@echo "... simple_logger/config_parsing.s"
 	@echo "... simple_logger/simpleLogger.o"
 	@echo "... simple_logger/simpleLogger.i"
 	@echo "... simple_logger/simpleLogger.s"
