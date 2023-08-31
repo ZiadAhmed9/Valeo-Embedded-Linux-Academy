@@ -1,10 +1,10 @@
 multi_service_application
 by Ziad Ahmed
-
+-------------------------------------------------------------------------------------------------------
 CAUTION!: Inside the code are some paths that need to be adjusted before trying on your machine 
           can be found in: simple_logger/simplelogger.hpp
           simple_logger/config_parsing.hpp
-
+-------------------------------------------------------------------------------------------------------
 The creation of :
 3 main programs:
 1) Daemon_logger: 
@@ -41,6 +41,8 @@ How it works:
 -Each program can run on its own you can and you can run them in the any order
 -To get the best functionality I suggest you run the logger daemon as systemd service  then the receiver then try the app
 -Log files can by found in the logs directory inside the project
+
+
 
 
 
