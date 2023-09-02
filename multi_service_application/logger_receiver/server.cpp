@@ -7,7 +7,6 @@ objective : receive logs from the machine running the daemon logger through sock
 
 int main()
 {
-    int state;  //integer holding current client state
     char socket_buffer[SOCKET_BUFFER_SIZE]; //buffer for socket client
     TCP_server server(SOCKET_PORT); // object of the class TCP server and pass it the port
     cout << "server is listening on port:" << SOCKET_PORT << endl;

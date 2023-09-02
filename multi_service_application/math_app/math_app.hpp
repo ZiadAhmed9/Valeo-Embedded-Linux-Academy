@@ -7,6 +7,7 @@
 using namespace std;
 #define LOG math_app_obj.messageq_send // macro used to send logs through MQ
 
+/* Class for calculations */
 class calculator
 {
 private:
@@ -16,32 +17,33 @@ private:
     double result;
 
 public:
-    calculator(double num1, double num2)
+    calculator(double num1, double num2)    //constructor to pass the data while creating the object
     {
         this->num1 = num1;
         this->num2 = num2;
     }
-    double add()
+    /* Addition function takes double and returns a double*/
+    double add()        
     {
         result = num1 + num2;
         return num1 + num2;
     }
-
+    /* Subtraction function takes double and returns a double*/
     double sub()
     {
         result = num1 - num2;
         return num1 - num2;
     }
-
+    /* Multiplication function takes double and returns a double*/
     double multiply()
     {
         result = num1 * num2;
         return num1 * num2;
     }
-
+    /* Division function takes double and returns a double*/
     double divide()
     {
-        if (num2 == 0)
+        if (num2 == 0)  //if the second number is 0 
         {
             cout << "Error: Division by zero is not allowed.\n";
             return 0;
@@ -56,4 +58,7 @@ public:
 };
 
 void print_help(char* argv);
+
+
+
 #endif
