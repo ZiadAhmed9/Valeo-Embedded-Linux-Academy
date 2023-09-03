@@ -1,0 +1,1 @@
+/home/ziad/x-tools/aarch64-rpi4-linux-gnu/bin/aarch64-rpi4-linux-gnu-g++ -fPIC -shared -Wl,-soname,libipc_lib.so -o libipc_lib.so CMakeFiles/ipc_lib.dir/ipc_lib.cpp.o   -L/home/ziad/boost/lib 

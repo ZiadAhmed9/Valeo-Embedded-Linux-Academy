@@ -1,0 +1,6 @@
+0000001 | 2023-09-03, 04:09:05.575877 [trace] - DAEMON LOGGER APP: config.txt is successfully parsed.
+0000002 | 2023-09-03, 04:09:05.591984 [trace] - DAEMON LOGGER APP: Vector containing classes created.
+0000003 | 2023-09-03, 04:09:05.592567 [trace] - DAEMON LOGGER APP: Socket client connected to server.
+0000004 | 2023-09-03, 04:09:06.007485 [error] - DAEMON LOGGER APP: No data received from message queue named /math_app
+0000005 | 2023-09-03, 04:09:08.002488 [error] - DAEMON LOGGER APP: No data received from message queue named /math_app
+0000006 | 2023-09-03, 04:09:09.003250 [error] - DAEMON LOGGER APP: No data received from message queue named /math_app
