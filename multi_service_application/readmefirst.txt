@@ -1,5 +1,6 @@
 By: Ziad Ahmed
-
+Link to the video demonstration
+https://drive.google.com/file/d/1UwAs0BFs6OWdzza3jc_6oYfm1dXxMZrv/view?usp=drive_link
 
 - Both ubuntu part and rpi part contain same directories and same source codes
 - RPI part have its codes compile with a different compiler 
