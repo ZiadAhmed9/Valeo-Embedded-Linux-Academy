@@ -1,0 +1,16 @@
+By: Ziad Ahmed
+
+
+- Both ubuntu part and rpi part contain same directories and same source codes
+- RPI part have its codes compile with a different compiler 
+- CMAKE is different for both 
+
+
+- I downloaded boost library again with .jam file edited to cross compile successfuly with the boost logger 
+- the .jam file contains this line 
+
+`using gcc : aarch64 : aarch64-rpi4-linux-gnu-g++ ;`  and inside the CMAKElists of the rpi I have written the boost include file path manually to avoid errors
+
+-Inside the project you will stumble across multiple readme files kindly read them for better understanding 
+
+-Also a video demonstration is provided and some screenshots have a look at them
