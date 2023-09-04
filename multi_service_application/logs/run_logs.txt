@@ -1,9 +1,0 @@
-0000001 | 2023-09-02, 03:43:56.204916 [fatal] - DAEMON LOGGER APP: Config file is empty!
-0000002 | 2023-09-02, 03:44:01.205433 [fatal] - DAEMON LOGGER APP: Config file is empty!
-0000003 | 2023-09-02, 03:44:06.209946 [fatal] - DAEMON LOGGER APP: Config file is empty!
-0000004 | 2023-09-02, 03:44:11.210930 [trace] - DAEMON LOGGER APP: config.txt is successfully parsed.
-0000005 | 2023-09-02, 03:44:11.211061 [trace] - DAEMON LOGGER APP: Vector containing classes created.
-0000006 | 2023-09-02, 03:44:11.211171 [error] - DAEMON LOGGER APP: Socket client failed to connected to server.
-0000007 | 2023-09-02, 03:44:12.000101 [error] - DAEMON LOGGER APP: No data received from message queue named /math_app
-0000008 | 2023-09-02, 03:44:12.000210 [error] - DAEMON LOGGER APP: Socket client is not connected to server retrying again ...
-0000009 | 2023-09-02, 03:44:14.000155 [error] - DAEMON LOGGER APP: No data received from message queue named /math_app

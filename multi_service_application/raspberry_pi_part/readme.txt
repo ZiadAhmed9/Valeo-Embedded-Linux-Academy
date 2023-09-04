@@ -1,4 +1,6 @@
-multi_service_application
+multi_service_application (raspberry pi Directory)
+
+This directory contains the executables for the raspberry pi
 by Ziad Ahmed
 -------------------------------------------------------------------------------------------------------
 CAUTION!: Inside the code are some paths that need to be adjusted before trying on your machine 

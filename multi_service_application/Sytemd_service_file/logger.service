@@ -5,7 +5,9 @@ After=network.target
 ExecStart=/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build
 Restart=always
 presistent=true
+RestartSec=3
+StartLimitInterval=0
 
 
 [Install]
-WantedBy=multitarget.target
+WantedBy=multi-user.target

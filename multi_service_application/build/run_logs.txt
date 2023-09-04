@@ -1,6 +1,6 @@
-0000001 | 2023-09-03, 04:09:05.575877 [trace] - DAEMON LOGGER APP: config.txt is successfully parsed.
-0000002 | 2023-09-03, 04:09:05.591984 [trace] - DAEMON LOGGER APP: Vector containing classes created.
-0000003 | 2023-09-03, 04:09:05.592567 [trace] - DAEMON LOGGER APP: Socket client connected to server.
-0000004 | 2023-09-03, 04:09:06.007485 [error] - DAEMON LOGGER APP: No data received from message queue named /math_app
-0000005 | 2023-09-03, 04:09:08.002488 [error] - DAEMON LOGGER APP: No data received from message queue named /math_app
-0000006 | 2023-09-03, 04:09:09.003250 [error] - DAEMON LOGGER APP: No data received from message queue named /math_app
+0000010 | 2023-09-04, 14:09:30.739753 [trace] - MATH APP: Result printed.
+0000011 | 2023-09-04, 14:09:30.740088 [error] - DAEMON LOGGER APP: Socket client is not connected to server retrying again ...
+0000012 | 2023-09-04, 14:09:34.000936 [error] - DAEMON LOGGER APP: No data received from message queue named /math_app
+0000013 | 2023-09-04, 14:09:34.001076 [error] - DAEMON LOGGER APP: Socket client is not connected to server retrying again ...
+0000014 | 2023-09-04, 14:09:38.004230 [error] - DAEMON LOGGER APP: No data received from message queue named /math_app
+0000015 | 2023-09-04, 14:09:38.008169 [error] - DAEMON LOGGER APP: Socket client is not connected to server retrying again ...
