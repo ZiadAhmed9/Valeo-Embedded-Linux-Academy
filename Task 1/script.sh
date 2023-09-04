@@ -1,4 +1,3 @@
-#By ziad ahmed 
 #In this script I will be using the bash scripting to copy multiple files to a destination
 #Files must be in my current directory where I'm at in the terminal else won't work
 #example of command to use this script: ./script.sh text1.txt text2.txt /path/to/destination
