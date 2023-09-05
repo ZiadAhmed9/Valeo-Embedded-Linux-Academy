@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
-#include "/home/ziad/project_dir/include/WriteInFile.hpp"
-#include "/home/ziad/project_dir/include/Print.hpp"
+#include "../include/WriteInFile.hpp"
+#include "../include/Print.hpp"
 
 
 int main(int argc,char* argv[])

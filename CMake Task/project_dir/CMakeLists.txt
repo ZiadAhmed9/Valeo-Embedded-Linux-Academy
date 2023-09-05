@@ -9,8 +9,8 @@ project(
 
 add_library(MyLib STATIC library/WriteInFIle.cpp include/WriteInFile.hpp)
 
-add_executable(MyProgram src/main.cpp src/Print.cpp include/Print.hpp)
+add_executable(program src/main.cpp src/Print.cpp include/Print.hpp)
 
-target_link_libraries(MyProgram PRIVATE MyLib)
+target_link_libraries(program PRIVATE MyLib)
 
-install(TARGETS MyProgram)
+install(TARGETS program)
