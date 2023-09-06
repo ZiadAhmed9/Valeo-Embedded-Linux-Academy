@@ -2,7 +2,7 @@ Description=My Daemon Logger Service
 After=network.target
 
 [Service]
-ExecStart=/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build
+ExecStart=/home/ziad/test1/Valeo-Embedded-Linux-Academy/multi_service_application/build/daemon_logger
 Restart=always
 presistent=true
 RestartSec=3
