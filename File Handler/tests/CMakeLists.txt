@@ -1,0 +1,4 @@
+add_executable(requester_test requester_test.cpp Requester_functions.cpp)
+target_link_libraries(requester_test PRIVATE gtest gtest_main)
+include(GoogleTest)
+gtest_discover_tests(requester_test)

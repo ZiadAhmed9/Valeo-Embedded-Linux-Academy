@@ -1,0 +1,15 @@
+0000001 | 2023-09-06, 18:27:08.989455 [trace] - FILE HANDLER: Semaphore created and initially is 0
+0000001 | 2023-09-06, 18:27:08.990361 [trace] - REQUESTER: Pipe desciptor acquired
+0000002 | 2023-09-06, 18:27:08.990466 [warning] - REQUESTER: Only one argument is entered
+0000002 | 2023-09-06, 18:27:08.990526 [trace] - FILE HANDLER: found 2 bytes containing : ls
+0000003 | 2023-09-06, 18:27:08.990912 [trace] - REQUESTER: command is sent through the pipe successfully
+0000003 | 2023-09-06, 18:27:08.991062 [trace] - FILE HANDLER: Memory is erased before writing on it
+0000004 | 2023-09-06, 18:27:08.991129 [trace] - FILE HANDLER: Writing on shared memory
+0000005 | 2023-09-06, 18:27:08.994948 [trace] - FILE HANDLER: Semaphore is incremented
+0000004 | 2023-09-06, 18:27:08.995077 [trace] - REQUESTER: Waiting For Semaphore
+0000005 | 2023-09-06, 18:27:08.995104 [trace] - REQUESTER: Semaphore for shared memory is acquired and is decremented
+0000006 | 2023-09-06, 18:27:08.995196 [trace] - REQUESTER: Successfully de-attached from shared memory  
+ ==================done================== 
+0000006 | 2023-09-06, 18:27:08.995481 [warning] - FILE HANDLER:No command received from requester checking again after 5 seconds
+0000007 | 2023-09-06, 18:27:13.996506 [warning] - FILE HANDLER:No command received from requester checking again after 5 seconds
+0000008 | 2023-09-06, 18:27:18.997516 [warning] - FILE HANDLER:No command received from requester checking again after 5 seconds

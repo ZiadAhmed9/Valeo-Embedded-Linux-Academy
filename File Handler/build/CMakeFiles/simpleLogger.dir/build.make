@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler"
+CMAKE_SOURCE_DIR = "/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/build"
+CMAKE_BINARY_DIR = "/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/simpleLogger.dir/depend.make
@@ -72,16 +72,16 @@ include CMakeFiles/simpleLogger.dir/flags.make
 CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.o: CMakeFiles/simpleLogger.dir/flags.make
 CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.o: ../simpleLogger/simpleLogger.cpp
 CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.o: CMakeFiles/simpleLogger.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.o -MF CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.o.d -o CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.o -c "/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/simpleLogger/simpleLogger.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.o -MF CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.o.d -o CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.o -c "/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/simpleLogger/simpleLogger.cpp"
 
 CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/simpleLogger/simpleLogger.cpp" > CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/simpleLogger/simpleLogger.cpp" > CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.i
 
 CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/simpleLogger/simpleLogger.cpp" -o CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/simpleLogger/simpleLogger.cpp" -o CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.s
 
 # Object files for target simpleLogger
 simpleLogger_OBJECTS = \
@@ -93,7 +93,7 @@ simpleLogger_EXTERNAL_OBJECTS =
 libsimpleLogger.a: CMakeFiles/simpleLogger.dir/simpleLogger/simpleLogger.cpp.o
 libsimpleLogger.a: CMakeFiles/simpleLogger.dir/build.make
 libsimpleLogger.a: CMakeFiles/simpleLogger.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libsimpleLogger.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libsimpleLogger.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/simpleLogger.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/simpleLogger.dir/link.txt --verbose=$(VERBOSE)
 
@@ -106,6 +106,6 @@ CMakeFiles/simpleLogger.dir/clean:
 .PHONY : CMakeFiles/simpleLogger.dir/clean
 
 CMakeFiles/simpleLogger.dir/depend:
-	cd "/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler" "/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler" "/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/build" "/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/build" "/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/build/CMakeFiles/simpleLogger.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler" "/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler" "/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/build" "/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/build" "/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/build/CMakeFiles/simpleLogger.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/simpleLogger.dir/depend
 

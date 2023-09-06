@@ -21,3 +21,6 @@ Supported commands:
 1) ls
 2) ls directory
 3) cat any file 
+
+
+Gtest is used to test some functions used in my code you can run the tests again in the tests directory

@@ -1,8 +1,8 @@
-# Install script for directory: /home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/googletest
+# Install script for directory: /home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/googletest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/buid")
+  set(CMAKE_INSTALL_PREFIX "/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/buid")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/build/googletest/googlemock/cmake_install.cmake")
+  include("/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/build/googletest/googlemock/cmake_install.cmake")
 
 endif()
 

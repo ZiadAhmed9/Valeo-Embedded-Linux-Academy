@@ -1,0 +1,5 @@
+add_test( is_file_test.file_extension_present [==[/home/ziad/repo/Valeo-Embedded-Linux-Academy/File Handler/tests/build/requester_test]==] [==[--gtest_filter=is_file_test.file_extension_present]==] --gtest_also_run_disabled_tests)
+set_tests_properties( is_file_test.file_extension_present PROPERTIES WORKING_DIRECTORY [==[/home/ziad/repo/Valeo-Embedded-Linux-Academy/File Handler/tests/build]==] SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test( is_file_test.file_extension_abscent [==[/home/ziad/repo/Valeo-Embedded-Linux-Academy/File Handler/tests/build/requester_test]==] [==[--gtest_filter=is_file_test.file_extension_abscent]==] --gtest_also_run_disabled_tests)
+set_tests_properties( is_file_test.file_extension_abscent PROPERTIES WORKING_DIRECTORY [==[/home/ziad/repo/Valeo-Embedded-Linux-Academy/File Handler/tests/build]==] SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set( requester_test_TESTS is_file_test.file_extension_present is_file_test.file_extension_abscent)

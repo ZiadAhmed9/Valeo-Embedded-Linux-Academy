@@ -1,5 +1,5 @@
-libdir=/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/buid/lib
-includedir=/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/buid/include
+libdir=/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/buid/lib
+includedir=/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/buid/include
 
 Name: gtest
 Description: GoogleTest (without main() function)

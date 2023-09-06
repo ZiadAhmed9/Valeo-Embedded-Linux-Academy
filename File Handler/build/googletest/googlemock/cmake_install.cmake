@@ -1,8 +1,8 @@
-# Install script for directory: /home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/googletest/googlemock
+# Install script for directory: /home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/googletest/googlemock
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/buid")
+  set(CMAKE_INSTALL_PREFIX "/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/buid")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,28 +43,28 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xgmockx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/googletest/googlemock/include/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/googletest/googlemock/include/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xgmockx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/build/lib/libgmock.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/build/lib/libgmock.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xgmockx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/build/lib/libgmock_main.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/build/lib/libgmock_main.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xgmockx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/build/googletest/googletest/generated/gmock.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/build/googletest/googletest/generated/gmock.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xgmockx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/build/googletest/googletest/generated/gmock_main.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/build/googletest/googletest/generated/gmock_main.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ziad/test/Valeo-Embedded-Linux-Academy/File Handler/build/googletest/googletest/cmake_install.cmake")
+  include("/home/ziad/any/Valeo-Embedded-Linux-Academy/File Handler/build/googletest/googletest/cmake_install.cmake")
 
 endif()
 

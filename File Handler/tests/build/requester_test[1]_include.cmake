@@ -1,0 +1,5 @@
+if(EXISTS "/home/ziad/repo/Valeo-Embedded-Linux-Academy/File Handler/tests/build/requester_test[1]_tests.cmake")
+  include("/home/ziad/repo/Valeo-Embedded-Linux-Academy/File Handler/tests/build/requester_test[1]_tests.cmake")
+else()
+  add_test(requester_test_NOT_BUILT requester_test_NOT_BUILT)
+endif()
