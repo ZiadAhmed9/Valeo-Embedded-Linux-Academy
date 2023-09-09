@@ -1,15 +1,92 @@
-0000001 | 2023-09-06, 18:27:08.989455 [trace] - FILE HANDLER: Semaphore created and initially is 0
-0000001 | 2023-09-06, 18:27:08.990361 [trace] - REQUESTER: Pipe desciptor acquired
-0000002 | 2023-09-06, 18:27:08.990466 [warning] - REQUESTER: Only one argument is entered
-0000002 | 2023-09-06, 18:27:08.990526 [trace] - FILE HANDLER: found 2 bytes containing : ls
-0000003 | 2023-09-06, 18:27:08.990912 [trace] - REQUESTER: command is sent through the pipe successfully
-0000003 | 2023-09-06, 18:27:08.991062 [trace] - FILE HANDLER: Memory is erased before writing on it
-0000004 | 2023-09-06, 18:27:08.991129 [trace] - FILE HANDLER: Writing on shared memory
-0000005 | 2023-09-06, 18:27:08.994948 [trace] - FILE HANDLER: Semaphore is incremented
-0000004 | 2023-09-06, 18:27:08.995077 [trace] - REQUESTER: Waiting For Semaphore
-0000005 | 2023-09-06, 18:27:08.995104 [trace] - REQUESTER: Semaphore for shared memory is acquired and is decremented
-0000006 | 2023-09-06, 18:27:08.995196 [trace] - REQUESTER: Successfully de-attached from shared memory  
+0000001 | 2023-09-09, 06:45:52.542059 [trace] - REQUESTER: Pipe desciptor acquired
+0000002 | 2023-09-09, 06:45:52.542215 [trace] - FILE HANDLER: found 12 bytes containing : ls home/ziad
+0000002 | 2023-09-09, 06:45:52.542391 [trace] - REQUESTER: command is sent through the pipe successfully
+0000003 | 2023-09-09, 06:45:52.542885 [trace] - FILE HANDLER: Memory is erased before writing on it
+0000004 | 2023-09-09, 06:45:52.542959 [trace] - FILE HANDLER: Writing on shared memory
+0000005 | 2023-09-09, 06:45:52.546897 [fatal] - FILE HANDLER: Requester commands tried to access a directory or file that does not exist
+0000006 | 2023-09-09, 06:45:52.546936 [trace] - FILE HANDLER: Semaphore is incremented
+0000003 | 2023-09-09, 06:45:52.547005 [trace] - REQUESTER: Waiting For Semaphore
+0000004 | 2023-09-09, 06:45:52.547032 [trace] - REQUESTER: Semaphore for shared memory is acquired and is decremented
+0000005 | 2023-09-09, 06:45:52.547099 [trace] - REQUESTER: Successfully de-attached from shared memory  
  ==================done================== 
-0000006 | 2023-09-06, 18:27:08.995481 [warning] - FILE HANDLER:No command received from requester checking again after 5 seconds
-0000007 | 2023-09-06, 18:27:13.996506 [warning] - FILE HANDLER:No command received from requester checking again after 5 seconds
-0000008 | 2023-09-06, 18:27:18.997516 [warning] - FILE HANDLER:No command received from requester checking again after 5 seconds
+0000001 | 2023-09-09, 06:46:01.744642 [trace] - REQUESTER: Pipe desciptor acquired
+0000002 | 2023-09-09, 06:46:01.744799 [trace] - REQUESTER: command is sent through the pipe successfully
+0000007 | 2023-09-09, 06:46:01.744961 [trace] - FILE HANDLER: found 12 bytes containing : ls home/ziad
+0000008 | 2023-09-09, 06:46:01.745456 [trace] - FILE HANDLER: Memory is erased before writing on it
+0000009 | 2023-09-09, 06:46:01.745525 [trace] - FILE HANDLER: Writing on shared memory
+0000010 | 2023-09-09, 06:46:01.750915 [fatal] - FILE HANDLER: Requester commands tried to access a directory or file that does not exist
+0000011 | 2023-09-09, 06:46:01.750983 [trace] - FILE HANDLER: Semaphore is incremented
+0000003 | 2023-09-09, 06:46:01.751012 [trace] - REQUESTER: Waiting For Semaphore
+0000004 | 2023-09-09, 06:46:01.751069 [trace] - REQUESTER: Semaphore for shared memory is acquired and is decremented
+0000005 | 2023-09-09, 06:46:01.751143 [trace] - REQUESTER: Successfully de-attached from shared memory  
+ ==================done================== 
+0000001 | 2023-09-09, 06:46:04.849338 [trace] - REQUESTER: Pipe desciptor acquired
+0000002 | 2023-09-09, 06:46:04.849455 [warning] - REQUESTER: Only one argument is entered
+0000003 | 2023-09-09, 06:46:04.849517 [trace] - REQUESTER: command is sent through the pipe successfully
+0000012 | 2023-09-09, 06:46:04.849704 [trace] - FILE HANDLER: found 2 bytes containing : ls
+0000013 | 2023-09-09, 06:46:04.850097 [trace] - FILE HANDLER: Memory is erased before writing on it
+0000014 | 2023-09-09, 06:46:04.850122 [trace] - FILE HANDLER: Writing on shared memory
+0000015 | 2023-09-09, 06:46:04.853956 [fatal] - FILE HANDLER: Requester commands tried to access a directory or file that does not exist
+0000016 | 2023-09-09, 06:46:04.854027 [trace] - FILE HANDLER: Semaphore is incremented
+0000004 | 2023-09-09, 06:46:04.854074 [trace] - REQUESTER: Waiting For Semaphore
+0000005 | 2023-09-09, 06:46:04.854108 [trace] - REQUESTER: Semaphore for shared memory is acquired and is decremented
+0000006 | 2023-09-09, 06:46:04.854184 [trace] - REQUESTER: Successfully de-attached from shared memory  
+ ==================done================== 
+0000001 | 2023-09-09, 06:46:14.459840 [trace] - REQUESTER: Pipe desciptor acquired
+0000002 | 2023-09-09, 06:46:14.459949 [warning] - REQUESTER: Only one argument is entered
+0000017 | 2023-09-09, 06:46:14.459996 [trace] - FILE HANDLER: found 2 bytes containing : ls
+0000003 | 2023-09-09, 06:46:14.460102 [trace] - REQUESTER: command is sent through the pipe successfully
+0000018 | 2023-09-09, 06:46:14.460362 [trace] - FILE HANDLER: Memory is erased before writing on it
+0000019 | 2023-09-09, 06:46:14.460433 [trace] - FILE HANDLER: Writing on shared memory
+0000020 | 2023-09-09, 06:46:14.463958 [fatal] - FILE HANDLER: Requester commands tried to access a directory or file that does not exist
+0000021 | 2023-09-09, 06:46:14.463990 [trace] - FILE HANDLER: Semaphore is incremented
+0000004 | 2023-09-09, 06:46:14.464062 [trace] - REQUESTER: Waiting For Semaphore
+0000005 | 2023-09-09, 06:46:14.464089 [trace] - REQUESTER: Semaphore for shared memory is acquired and is decremented
+0000006 | 2023-09-09, 06:46:14.464162 [trace] - REQUESTER: Successfully de-attached from shared memory  
+ ==================done================== 
+0000001 | 2023-09-09, 06:46:32.799796 [trace] - FILE HANDLER: Semaphore created and initially is 0
+0000001 | 2023-09-09, 06:46:35.110796 [trace] - REQUESTER: Pipe desciptor acquired
+0000002 | 2023-09-09, 06:46:35.110968 [warning] - REQUESTER: Only one argument is entered
+0000003 | 2023-09-09, 06:46:35.111091 [trace] - REQUESTER: command is sent through the pipe successfully
+0000002 | 2023-09-09, 06:46:35.111114 [trace] - FILE HANDLER: found 2 bytes containing : ls
+0000003 | 2023-09-09, 06:46:35.111634 [trace] - FILE HANDLER: Memory is erased before writing on it
+0000004 | 2023-09-09, 06:46:35.111714 [trace] - FILE HANDLER: Writing on shared memory
+0000005 | 2023-09-09, 06:46:35.115666 [trace] - FILE HANDLER: Semaphore is incremented
+0000004 | 2023-09-09, 06:46:35.115764 [trace] - REQUESTER: Waiting For Semaphore
+0000005 | 2023-09-09, 06:46:35.115804 [trace] - REQUESTER: Semaphore for shared memory is acquired and is decremented
+0000006 | 2023-09-09, 06:46:35.115889 [trace] - REQUESTER: Successfully de-attached from shared memory  
+ ==================done================== 
+0000001 | 2023-09-09, 06:46:36.923046 [trace] - REQUESTER: Pipe desciptor acquired
+0000006 | 2023-09-09, 06:46:36.923189 [trace] - FILE HANDLER: found 12 bytes containing : ls home/ziad
+0000002 | 2023-09-09, 06:46:36.923354 [trace] - REQUESTER: command is sent through the pipe successfully
+0000007 | 2023-09-09, 06:46:36.923641 [trace] - FILE HANDLER: Memory is erased before writing on it
+0000008 | 2023-09-09, 06:46:36.923708 [trace] - FILE HANDLER: Writing on shared memory
+0000009 | 2023-09-09, 06:46:36.927679 [fatal] - FILE HANDLER: Requester commands tried to access a directory or file that does not exist
+0000010 | 2023-09-09, 06:46:36.927726 [trace] - FILE HANDLER: Semaphore is incremented
+0000003 | 2023-09-09, 06:46:36.927787 [trace] - REQUESTER: Waiting For Semaphore
+0000004 | 2023-09-09, 06:46:36.927812 [trace] - REQUESTER: Semaphore for shared memory is acquired and is decremented
+0000005 | 2023-09-09, 06:46:36.927881 [trace] - REQUESTER: Successfully de-attached from shared memory  
+ ==================done================== 
+0000001 | 2023-09-09, 06:51:12.867011 [trace] - FILE HANDLER: Semaphore created and initially is 0
+0000001 | 2023-09-09, 06:51:17.101965 [trace] - REQUESTER: Pipe desciptor acquired
+0000002 | 2023-09-09, 06:51:17.102084 [warning] - REQUESTER: Only one argument is entered
+0000002 | 2023-09-09, 06:51:17.102135 [trace] - FILE HANDLER: found 2 bytes containing : ls
+0000003 | 2023-09-09, 06:51:17.102249 [trace] - REQUESTER: command is sent through the pipe successfully
+0000003 | 2023-09-09, 06:51:17.107622 [trace] - FILE HANDLER: Memory is erased before writing on it
+0000004 | 2023-09-09, 06:51:17.107698 [trace] - FILE HANDLER: Writing on shared memory
+0000005 | 2023-09-09, 06:51:17.111491 [trace] - FILE HANDLER: Semaphore is incremented
+0000004 | 2023-09-09, 06:51:17.111563 [trace] - REQUESTER: Waiting For Semaphore
+0000005 | 2023-09-09, 06:51:17.111591 [trace] - REQUESTER: Semaphore for shared memory is acquired and is decremented
+0000006 | 2023-09-09, 06:51:17.111670 [trace] - REQUESTER: Successfully de-attached from shared memory  
+ ==================done================== 
+0000001 | 2023-09-09, 06:51:26.242803 [trace] - REQUESTER: Pipe desciptor acquired
+0000002 | 2023-09-09, 06:51:26.243144 [trace] - REQUESTER: command is sent through the pipe successfully
+0000006 | 2023-09-09, 06:51:26.243279 [trace] - FILE HANDLER: found 12 bytes containing : cat run.logs
+0000007 | 2023-09-09, 06:51:26.243807 [trace] - FILE HANDLER: Memory is erased before writing on it
+0000008 | 2023-09-09, 06:51:26.243885 [trace] - FILE HANDLER: Writing on shared memory
+0000009 | 2023-09-09, 06:51:26.247485 [fatal] - FILE HANDLER: Requester commands tried to access a directory or file that does not exist
+0000010 | 2023-09-09, 06:51:26.247586 [trace] - FILE HANDLER: Semaphore is incremented
+0000003 | 2023-09-09, 06:51:26.247684 [trace] - REQUESTER: Waiting For Semaphore
+0000004 | 2023-09-09, 06:51:26.247717 [trace] - REQUESTER: Semaphore for shared memory is acquired and is decremented
+0000005 | 2023-09-09, 06:51:26.247813 [trace] - REQUESTER: Successfully de-attached from shared memory  
+ ==================done================== 

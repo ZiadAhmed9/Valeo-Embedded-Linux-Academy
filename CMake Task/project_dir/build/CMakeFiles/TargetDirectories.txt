@@ -1,0 +1,8 @@
+/home/ziad/any/Valeo-Embedded-Linux-Academy/CMake Task/project_dir/build/CMakeFiles/MyLib.dir
+/home/ziad/any/Valeo-Embedded-Linux-Academy/CMake Task/project_dir/build/CMakeFiles/program.dir
+/home/ziad/any/Valeo-Embedded-Linux-Academy/CMake Task/project_dir/build/CMakeFiles/edit_cache.dir
+/home/ziad/any/Valeo-Embedded-Linux-Academy/CMake Task/project_dir/build/CMakeFiles/rebuild_cache.dir
+/home/ziad/any/Valeo-Embedded-Linux-Academy/CMake Task/project_dir/build/CMakeFiles/list_install_components.dir
+/home/ziad/any/Valeo-Embedded-Linux-Academy/CMake Task/project_dir/build/CMakeFiles/install.dir
+/home/ziad/any/Valeo-Embedded-Linux-Academy/CMake Task/project_dir/build/CMakeFiles/install/local.dir
+/home/ziad/any/Valeo-Embedded-Linux-Academy/CMake Task/project_dir/build/CMakeFiles/install/strip.dir

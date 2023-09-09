@@ -1,27 +1,29 @@
 #include "File_handler.hpp"
+#include <fstream>
 using namespace std;
 int main()
 {
-  char command_buffer[COMMAND_SIZE];               // a buffer to hold the command in when taking it from the pipe
-  FILE *fp = nullptr;                    // a pointer to FILE type to be used in piping between the app and the terminal
+  int command_status;                     // This variable will be used to check for errors when we execute the commands
+  char command_buffer[COMMAND_SIZE];      // a buffer to hold the command in when taking it from the pipe
+  FILE *fp = nullptr;                     // a pointer to FILE type to be used in piping between the app and the terminal
   mkfifo(PIPE_NAME, 0666);                // create a pipe with name defined in shmem.hpp and with permision 0666
   int pipe_d = open(PIPE_NAME, O_RDONLY); // get the file descriptor of the pipe
-  if (pipe_d == -1)                      // checking if the pipe works correctly
+  if (pipe_d == -1)                       // checking if the pipe works correctly
   {
-    LOG_FATAL << "FILE HANDLER: failed to access the command pipe";
+    LOG_FATAL << "FILE HANDLER: Failed to access the command pipe";
     boost::log::core::get()->flush();
   }
 
   sem_t *semptr = sem_open(SEM_NAME, O_CREAT, AccessPerms, 0); // creating a semaphore initialized by 0
-  if (semptr == SEM_FAILED)                                         // if semaphore creation failed
+  if (semptr == SEM_FAILED)                                    // if semaphore creation failed
   {
-    LOG_FATAL << "FILE HANDLER: failed to access the semaphore";
+    LOG_FATAL << "FILE HANDLER: Failed to access the semaphore";
     boost::log::core::get()->flush();
   }
   LOG_TRACE << "FILE HANDLER: Semaphore created and initially is 0";
   boost::log::core::get()->flush();
 
-  while (true) // infinite loop
+  while (true) // infinite loop until an exception happens
   {
 
     int bytes_read = read(pipe_d, command_buffer, sizeof(command_buffer)); // read the pipe contents and store it in command_buffer and the size of the buffer is also passed
@@ -35,7 +37,6 @@ int main()
     command_buffer[bytes_read] = '\0';                                                             // last element in the string must be \0
     LOG_TRACE << "FILE HANDLER: found " << bytes_read << " bytes containing : " << command_buffer; // for tracing log the number of bytes and contents
     boost::log::core::get()->flush();
-
     /*now Open a pipe between terminal and cpp file, The function takes the command executes it and returns pointer to file containing output*/
     fp = popen(command_buffer, "r");
     if (!fp) // if file is not created didn't open
@@ -79,17 +80,38 @@ int main()
 
     LOG_TRACE << "FILE HANDLER: Writing on shared memory";
     boost::log::core::get()->flush();
+    // Copy the contents of the file containing the output of the command to the shared memory
     while (!feof(fp) && fgets(output_buffer, sizeof(output_buffer), fp) != NULL)
     {
       size_t len = strlen(output_buffer);                      // create a variable holding the length of the buffer
       memcpy(pshared_memory + total_size, output_buffer, len); // copy the memory line from the file to the shared memory
       total_size += len;                                       // increment to go to the next line
     }
+
+    /*Next part I will be checking if the command we executed is done correctly or not by checking status of pipe before closing it*/
+    command_status = pclose(fp);  //store the exit status inside a variable
+    if (command_status == -1)
+    {
+      cerr << "Error closing the pipe." << endl;
+      LOG_FATAL << "FILE HANDLER: Error closing the command pipe.";
+    }
+
+    else if (WIFEXITED(command_status))   //check if the command is done
+    {
+      int exitcode = WEXITSTATUS(command_status);     //store the exit status inside this integer
+      if (exitcode != 0)                  //if the exit status is not 0 then the user tried to access a non existant resources in his command
+      {
+        //Send a message that says to the user you entered a wrong command
+        memcpy(pshared_memory, "Error: The directory or file you want to access does not exist", sizeof("Error: The directory or file you want to access does not exist"));
+        LOG_FATAL << "FILE HANDLER: Requester commands tried to access a directory or file that does not exist";
+      }
+    }
+    
+    //relieving semaphore next
     sem_post(semptr);      // once done working with the shared memory we increment the semaphore
     shmdt(pshared_memory); // we now un-attach from the shared memory safely and start all over again
     LOG_TRACE << "FILE HANDLER: Semaphore is incremented";
     boost::log::core::get()->flush();
-    pclose(fp);
   }
   return 0;
 }
